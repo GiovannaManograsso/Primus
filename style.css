@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.30); /* oscurece apenas */
+    backdrop-filter: blur(2px);
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.678); /* Transparencia */
+    backdrop-filter: blur(8px);
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+.profile-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 35px;
+    font-weight: 600;
+    color: #352f55;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #454569;
+    margin-bottom: 20px;
+}
+
+.social img {
+    width: 40px;
+    margin: 0 6px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+}
+
+.social img:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
+}
+
+
+/* --- LINKS --- */
+
+.links a {
+    display: block;
+    text-decoration: none;
+    background-color: #121638;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #322c52;
+    transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------- */
+/*  RESPONSIVE DESIGN                                   */
+/* ---------------------------------------------------- */
+
+/* 📱 Celulares pequeños (menos de 380px) */
+@media (max-width: 380px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .profile-img img {
+        width: 65px;
+        height: 65px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .social img {
+        width: 32px;
+    }
+
+    .links a {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* 📱 Celulares normales (381px a 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .container {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 25px;
+    }
+}
+
+/* 📱📱 Tablets (600px a 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+    body {
+        height: auto;
+        padding: 30px;
+    }
+
+    .container {
+        max-width: 450px;
+        padding: 35px;
+    }
+
+    .profile-img img {
+        width: 90px;
+        height: 90px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .social img {
+        width: 45px;
+    }
+
+    .links a {
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+
+/* 💻 Tablets grandes (900px a 1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+    .container {
+        max-width: 500px;
+    }
+}
